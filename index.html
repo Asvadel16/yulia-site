@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Änderungsschneiderei Yulia | Nähen & digitale Lösungen in Offenburg."/>
+  <title>Yulia | Änderungsschneiderei</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fff0f5;
+      color: #333;
+    }
+    header {
+      background-color: #e75480;
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+      position: relative;
+    }
+    .lang {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+    .lang button {
+      margin-left: 5px;
+      background: white;
+      border: none;
+      padding: 0.3rem 0.7rem;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      color: #e75480;
+    }
+    section {
+      max-width: 900px;
+      margin: 2rem auto;
+      background: white;
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+    img.photo {
+      width: 100%;
+      border-radius: 10px;
+      margin: 1rem 0;
+    }
+    .contact a {
+      display: inline-block;
+      margin: 0.5rem 1rem 0.5rem 0;
+      background: #e75480;
+      color: white;
+      padding: 0.7rem 1.2rem;
+      text-decoration: none;
+      border-radius: 6px;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #666;
+    }
+  </style>
+  <script>
+    const langContent = {
+      de: {
+        about: "Ich heiße Yulia und arbeite im Bereich Änderungsschneiderei sowie mit digitalen Projekten.",
+        reviews: "Kundenmeinungen"
+      },
+      ua: {
+        about: "Мене звати Юлія, я займаюся пошиттям одягу та цифровими проєктами.",
+        reviews: "Відгуки клієнтів"
+      },
+      en: {
+        about: "My name is Yulia. I work in clothing alterations and digital projects.",
+        reviews: "Customer Reviews"
+      },
+      ru: {
+        about: "Меня зовут Юлия. Я занимаюсь пошивом одежды и цифровыми проектами.",
+        reviews: "Отзывы клиентов"
+      }
+    };
+    function switchLang(lang) {
+      document.getElementById("about").innerText = langContent[lang].about;
+      document.getElementById("reviews").innerText = langContent[lang].reviews;
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Yulia</h1>
+    <p>Änderungsschneiderei & Digitale Lösungen</p>
+    <div class="lang">
+      <button onclick="switchLang('de')">DE</button>
+      <button onclick="switchLang('ua')">UA</button>
+      <button onclick="switchLang('en')">EN</button>
+      <button onclick="switchLang('ru')">RU</button>
+    </div>
+  </header>
+
+  <section>
+    <h2>Über mich</h2>
+    <p id="about">Ich heiße Yulia und arbeite im Bereich Änderungsschneiderei sowie mit digitalen Projekten.</p>
+
+    <img src="image1.jpg" class="photo" alt="Foto 1"/>
+    <img src="image2.jpg" class="photo" alt="Foto 2"/>
+    <img src="image3.jpg" class="photo" alt="Foto 3"/>
+    <img src="image4.jpg" class="photo" alt="Foto 4"/>
+
+    <div class="contact">
+      <h3>Kontakt</h3>
+      <p><strong>Adresse:</strong> Musterstraße 1, 77652 Offenburg</p>
+      <p><strong>Telefon:</strong> +49 123 4567890</p>
+      <p><strong>Email:</strong> yulia@example.com</p>
+      <a href="tel:+491234567890">Anrufen</a>
+      <a href="https://www.google.com/maps?q=Offenburg" target="_blank">Karte</a>
+      <a href="https://wa.me/491234567890" target="_blank">WhatsApp</a>
+      <a href="https://t.me/username" target="_blank">Telegram</a>
+    </div>
+
+    <h3 id="reviews">Kundenmeinungen</h3>
+    <p>⭐️⭐️⭐️⭐️⭐️ – „Sehr zufrieden mit der schnellen und sauberen Arbeit!“</p>
+    <p>⭐️⭐️⭐️⭐️⭐️ – „Toller Service, faire Preise. Jederzeit wieder!“</p>
+  </section>
+
+  <footer>
+    &copy; 2025 Yulia. Alle Rechte vorbehalten.
+  </footer>
+</body>
+</html>
